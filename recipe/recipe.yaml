@@ -10,14 +10,14 @@ source:
   sha256: a429e0321cd5d8ca61d966ab853a56155aa3f4e43e69054493323f4df1f7e4bc
 
 build:
-  number: 0
+  number: 1
   script:
     env:
       PYO3_USE_ABI3_FORWARD_COMPATIBILITY: '1'
     content:
       - cargo-bundle-licenses --format yaml --output THIRDPARTY.yml
       - python -m pip install . -vv
-  
+
 
 requirements:
   build:
@@ -35,7 +35,7 @@ requirements:
 tests:
   - python:
       imports:
-      - ormar_rust_utils
+        - ormar_rust_utils
       pip_check: true
 
 about:
