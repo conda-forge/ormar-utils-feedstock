@@ -1,5 +1,5 @@
 context:
-  version: "0.1.1"
+  version: "0.2.1"
 
 package:
   name: ormar-utils
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/ormar-orm/ormar-utils/archive/refs/tags/v${{ version }}.tar.gz
-  sha256: a429e0321cd5d8ca61d966ab853a56155aa3f4e43e69054493323f4df1f7e4bc
+  sha256: 11f363f301e9635ee97d8b7f768032c8b137890390073db3645a2cc812b1e467
 
 build:
   number: 0
@@ -17,7 +17,7 @@ build:
     content:
       - cargo-bundle-licenses --format yaml --output THIRDPARTY.yml
       - python -m pip install . -vv
-  
+
 
 requirements:
   build:
@@ -35,7 +35,7 @@ requirements:
 tests:
   - python:
       imports:
-      - ormar_rust_utils
+        - ormar_rust_utils
       pip_check: true
 
 about:
